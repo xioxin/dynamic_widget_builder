@@ -103,3 +103,74 @@ export enum Overflow {
   visible = 'visible',
   clip = 'clip',
 }
+
+export enum Axis {
+  horizontal = 'horizontal',
+  vertical = 'vertical',
+}
+
+
+export enum WrapAlignment {
+  start = 'start',
+  end = 'end',
+  center = 'center',
+  spaceBetween = 'spaceBetween',
+  spaceAround = 'spaceAround',
+  spaceEvenly = 'spaceEvenly',
+}
+
+export enum BlendMode {
+  clear = 'clear',
+  src = 'src',
+  dst = 'dst',
+  srcOver = 'srcOver',
+  dstOver = 'dstOver',
+  srcIn = 'srcIn',
+  dstIn = 'dstIn',
+  srcOut = 'srcOut',
+  dstOut = 'dstOut',
+  srcATop = 'srcATop',
+  dstATop = 'dstATop',
+  xor = 'xor',
+  plus = 'plus',
+  modulate = 'modulate',
+  screen = 'screen',
+  overlay = 'overlay',
+  darken = 'darken',
+  lighten = 'lighten',
+  colorDodge = 'colorDodge',
+  colorBurn = 'colorBurn',
+  hardLight = 'hardLight',
+  softLight = 'softLight',
+  difference = 'difference',
+  exclusion = 'exclusion',
+  multiply = 'multiply',
+  hue = 'hue',
+  saturation = 'saturation',
+  color = 'color',
+  luminosity = 'luminosity',
+}
+
+
+export enum BoxFit {
+  fill = 'fill',
+  contain = 'contain',
+  cover = 'cover',
+  fitWidth = 'fitWidth',
+  fitHeight = 'fitHeight',
+  none = 'none',
+  scaleDown = 'scaleDown',
+}
+export enum ImageRepeat {
+  repeat = 'repeat',
+  repeatX = 'repeatX',
+  repeatY = 'repeatY',
+  noRepeat = 'noRepeat',
+}
+
+export enum FilterQuality {
+  none = 'none',
+  low = 'low',
+  medium = 'medium',
+  high = 'high',
+}

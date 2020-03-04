@@ -34,7 +34,7 @@ const test = Stack({
     ]
 });
 
-console.log(JSON.stringify(test.toJson(), null, 2));
+console.log(JSON.stringify(test.build(), null, 2));
 ```
 
 ### OUTPUT

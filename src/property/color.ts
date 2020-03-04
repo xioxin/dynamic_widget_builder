@@ -1,7 +1,9 @@
-import {double, int} from "../../types";
+import {double, int} from "../types";
+import {Buildable} from "../base";
 
-export class ColorProperty {
+export class ColorProperty extends Buildable{
   constructor(public value: number) {
+    super();
   }
 
   get alpha() {
@@ -43,7 +45,7 @@ export class ColorProperty {
   }
 
 
-  toJson() {
+  build() {
     return this.value;
   }
 }

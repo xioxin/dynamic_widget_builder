@@ -1,8 +1,8 @@
 import {Widget} from "../../base";
 import {Alignment, double} from "../../types";
-import {BoxConstraintsProperty} from "../property/box_constraints";
-import {ColorProperty} from "../property/color";
-import {EdgeInsetsProperty} from "../property/edgeInsets_param";
+import {BoxConstraintsProperty} from "../../property/box_constraints";
+import {ColorProperty} from "../../property/color";
+import {EdgeInsetsProperty} from "../../property/edgeInsets_param";
 
 interface ContainerParam {
   child?: Widget;

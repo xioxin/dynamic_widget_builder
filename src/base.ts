@@ -8,11 +8,16 @@ export class OutField {
     }
 }
 
-export class Widget {
+export class Buildable {
+    build() : any {}
+}
+
+export class Widget extends Buildable{
     _widget: string;
     _outFields: OutField[] = [];
 
     constructor(widgetName?: string, outFields: (OutField | string)[] = []) {
+        super();
         this._widget = widgetName;
         this.addFields(outFields);
     }
@@ -24,7 +29,7 @@ export class Widget {
         }))
     }
 
-    toJson() {
+    build(): (Widget | {[key: string] : any}) {
         const map: {[key: string] : any} = {};
         if(this._widget != null) {
             map['type'] = this._widget;
@@ -32,13 +37,21 @@ export class Widget {
         this._outFields.forEach(field => {
             let val = (this as any)[field.key];
             if(typeof val === 'undefined' || val === null) return;
-            if(typeof val === "object" && 'toJson' in val && typeof val['toJson'] == 'function') {
-                val = val['toJson']();
+            while (true) {
+                if(val instanceof Buildable) {
+                    val = val.build();
+                }else {
+                    break;
+                }
             }
             if(typeof val === "object" && Array.isArray(val)){
                 val = val.map((v) => {
-                    if(typeof v === "object" && 'toJson' in v && typeof v['toJson'] == 'function') {
-                        return v['toJson']();
+                    while (true) {
+                        if(v instanceof Buildable) {
+                            v = v.build();
+                        }else {
+                            break;
+                        }
                     }
                     return v;
                 });
@@ -50,4 +63,8 @@ export class Widget {
         });
         return map;
     }
+
 }
+
+
+

@@ -1,7 +1,7 @@
 import {Widget} from "../../base";
 import {double} from "../../types";
-import {ColorProperty} from "../property/color";
-import {EdgeInsetsProperty} from "../property/edgeInsets_param";
+import {ColorProperty} from "../../property/color";
+import {EdgeInsetsProperty} from "../../property/edgeInsets_param";
 
 interface RaisedButtonParam {
   child?: Widget;
@@ -28,7 +28,7 @@ export class RaisedButtonWidget extends Widget {
   textColor?: ColorProperty;
 
   constructor(param: RaisedButtonParam) {
-    super('Container', [
+    super('RaisedButton', [
       'child', 'color', 'disabledColor', 'disabledElevation',
       'disabledTextColor', 'padding', 'elevation',
       'splashColor', 'textColor'

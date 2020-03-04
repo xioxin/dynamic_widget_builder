@@ -1,6 +1,6 @@
 import {Widget} from "../../base";
 import {double, int, TextAlign, TextDirection, TextOverflow} from "../../types";
-import {TextStyleProperty} from "../property/type_style";
+import {TextStyleProperty} from "../../property/text_style";
 export interface TextParam {
     textAlign?: TextAlign;
     overflow?: TextOverflow;

@@ -1,4 +1,5 @@
-import {double} from "../../types";
+import {double} from "../types";
+import {Buildable, Widget} from "../base";
 
 export interface EdgeInsetsParam {
   left?: double,
@@ -7,18 +8,16 @@ export interface EdgeInsetsParam {
   bottom?: double,
 }
 
-export class EdgeInsetsProperty {
+export class EdgeInsetsProperty extends Buildable {
 
   constructor(
     public left: double,
     public top: double,
     public right: double,
     public bottom: double,
-  ) {
-  }
+  ) { super()}
 
-
-  toJson() {
+  build() {
     return [this.left, this.top, this.right, this.bottom].toString();
   }
 }

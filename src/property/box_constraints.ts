@@ -1,5 +1,5 @@
-import {double} from "../../types";
-import {Widget} from "../../base";
+import {double} from "../types";
+import {Widget} from "../base";
 
 export interface BoxConstraintsParam {
   minWidth?: double;

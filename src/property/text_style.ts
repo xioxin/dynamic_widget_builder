@@ -1,5 +1,5 @@
-import {double, FontStyle, FontWeight, TextDecoration} from "../../types";
-import {Widget} from "../../base";
+import {double, FontStyle, FontWeight, TextDecoration} from "../types";
+import {Widget} from "../base";
 import {ColorProperty} from "./color";
 
 export interface TextStyleParam {
