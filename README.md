@@ -11,32 +11,38 @@ https://github.com/dengyin2000/dynamic_widget
 * [x] RaisedButton Widget
 * [x] Row Widget
 * [x] Column Widget
-* [ ] AssetImage Widget
-* [ ] NetworkImage Widget
-* [ ] FileImage Widget
-* [ ] Placeholder Widget
+* [x] AssetImage Widget
+* [x] NetworkImage Widget
+* [x] FileImage Widget
+* [x] Placeholder Widget
 * [ ] GridView Widget
 * [ ] ListView Widget
 * [ ] PageView Widget
-* [ ] Expanded Widget
-* [ ] Padding Widget
+* [x] Expanded Widget
+* [x] Padding Widget
 * [x] Center Widget
 * [x] Align Widget
-* [ ] AspectRatio Widget
+* [x] AspectRatio Widget
 * [ ] FittedBox Widget
 * [ ] Baseline Widget
 * [x] Stack Widget
 * [ ] Positioned Widget
 * [ ] IndexedStack Widget
-* [ ] ExpandedSizedBox Widget
-* [ ] SizedBox Widget
-* [ ] Opacity Widget
-* [ ] Wrap Widget
+* [x] ExpandedSizedBox Widget
+* [x] SizedBox Widget
+* [x] Opacity Widget
+* [x] Wrap Widget
 * [ ] ClipRRect Widget
-* [ ] SafeArea Widget
+* [x] SafeArea Widget
 * [ ] ListTile Widget
 
+## Example
 
+### Complex example
+[test/test.ts](test/test.ts)
+
+
+### Simple example
 ```javascript
 const test = Stack({
     children: [
