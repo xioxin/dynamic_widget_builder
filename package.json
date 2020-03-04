@@ -1,0 +1,17 @@
+{
+  "name": "dynamic_widget_builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ts-node ./test/test.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3",
+    "ts-node": "^8.6.2"
+  }
+}
