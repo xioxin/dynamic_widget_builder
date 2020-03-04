@@ -31,13 +31,21 @@ export class Widget {
         }
         this._outFields.forEach(field => {
             let val = (this as any)[field.key];
-            if(typeof val == "object" && 'toJson' in val && typeof val['toJson'] == 'function') {
+            if(typeof val === 'undefined' || val === null) return;
+            if(typeof val === "object" && 'toJson' in val && typeof val['toJson'] == 'function') {
                 val = val['toJson']();
+            }
+            if(typeof val === "object" && Array.isArray(val)){
+                val = val.map((v) => {
+                    if(typeof v === "object" && 'toJson' in v && typeof v['toJson'] == 'function') {
+                        return v['toJson']();
+                    }
+                    return v;
+                });
             }
             if(field.convert) {
                 val = field.convert(val);
             }
-            if(typeof val === 'undefined') return;
             map[field.outKey] = val;
         });
         return map;

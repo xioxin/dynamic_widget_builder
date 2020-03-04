@@ -1,15 +1,7 @@
-import {Align} from "../src/widget/basic/align";
-import {Text} from "../src/widget/basic/text";
-import {Alignment, FontStyle, FontWeight} from "../src/types";
-import {Container} from "../src/widget/basic/container";
-import {BoxConstraints} from "../src/widget/property/box_constraints";
-import {EdgeInsets} from "../src/widget/property/edgeInsets_param";
-import {TextStyle} from "../src/widget/property/type_style";
-import {Color} from "../src/widget/property/color";
-import {Stack} from "../src/widget/basic/stack";
-import {Column} from "../src/widget/basic/column";
-import {Row} from "../src/widget/basic/row";
+dynamic_widget_builder
+---------------------------
 
+```javascript
 const test = Stack({
     children: [
         Align({
@@ -43,3 +35,52 @@ const test = Stack({
 });
 
 console.log(JSON.stringify(test.toJson(), null, 2));
+```
+
+### OUTPUT
+```json
+{
+  "type": "Stack",
+  "children": [
+    {
+      "type": "Align",
+      "child": {
+        "type": "Column",
+        "children": [
+          {
+            "type": "Container",
+            "child": {
+              "type": "Text",
+              "data": "hello world",
+              "style": {
+                "color": 4279383126,
+                "fontStyle": "italic",
+                "fontWeight": "bold"
+              }
+            },
+            "padding": "16,8,16,8",
+            "constraints": {
+              "minHeight": 200,
+              "maxHeight": 500
+            }
+          },
+          {
+            "type": "Row",
+            "children": [
+              {
+                "type": "Text",
+                "data": "hello world"
+              },
+              {
+                "type": "Text",
+                "data": "hello world"
+              }
+            ]
+          }
+        ]
+      },
+      "alignment": "center"
+    }
+  ]
+}
+```
