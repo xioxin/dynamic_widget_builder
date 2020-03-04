@@ -1,7 +1,9 @@
 dynamic_widget_builder
 ---------------------------
+# Parser
+https://github.com/dengyin2000/dynamic_widget
 
-## Widget
+## Already completed widgets
 * [x] Container Widget
 * [x] Text Widget
 * [ ] TextSpan
